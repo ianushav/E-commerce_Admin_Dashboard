@@ -28,7 +28,7 @@ const AdminNavbar = () => {
     <nav className="navbar navbar-expand-lg custom-navbar">
       <div className="container">
         <a className="navbar-brand d-flex align-items-center" href="#">
-          <img src="/ayur-logo.png" alt="Logo" className="law-icon" />
+          <img src="./ayur-logo.png" alt="Logo" className="law-icon" />
         </a>
         <button
           className="navbar-toggler"
@@ -46,7 +46,7 @@ const AdminNavbar = () => {
             <li className="nav-item profile-dropdown" ref={dropdownRef}>
               <div className="profile-container" onClick={toggleDropdown}>
                 <img
-                  src="/pat2.jpeg"
+                  src="./pat2.jpeg"
                   className="profile-image"
                 />
               </div>
