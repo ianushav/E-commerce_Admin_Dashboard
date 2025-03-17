@@ -14,7 +14,7 @@ import UpdateProducts from "./Components/UpdateProducts";
 function App() {
   return (
     <StrictMode>
-      <Router>
+      <Router basename="/E-commerce_Admin_Dashboard">  {/* 👈 Fix for GitHub Pages */}
         <AdminNavbar />
         <div className="d-flex flex-md-row">
           {/* Sidebar */}
@@ -22,6 +22,7 @@ function App() {
           <div className="flex-grow-1 p-3">
             <Routes>
               <Route path="/" element={<Dashboard />} />
+              <Route path="/dashboard" element={<Dashboard />} />
               <Route path="/customers" element={<AdminCustomers />} />
               <Route path="/orders" element={<AdminOrders />} />
               <Route path="/products" element={<AdminProducts />} />

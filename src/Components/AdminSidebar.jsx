@@ -5,7 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import '../Components/Styles/AdminSidebar.css';
 
 const sidebarItems = [
-  { name: 'Dashboard', path: '/', icon: faHome },
+  { name: 'Dashboard', path: '/dashboard', icon: faHome },
   { name: 'Orders', path: '/orders', icon: faShoppingBag },
   { name: 'Products', path: '/products', icon: faMortarPestle },
   { name: 'Customers', path: '/customers', icon: faUsers },
@@ -23,8 +23,8 @@ const AdminSidebar = () => {
           const isActive =
             item.name === 'Products'
               ? currentPath.startsWith('/products') || currentPath.startsWith('/addproduct') || currentPath.startsWith('/updateproduct')
-              : item.path === '/'
-              ? currentPath === '/' || currentPath === '/'
+              : item.path === '/dashboard'
+              ? currentPath === '/dashboard' || currentPath === '/'
               : currentPath === item.path;
 
           return (
