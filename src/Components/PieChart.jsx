@@ -9,11 +9,18 @@ ChartJS.register(ArcElement, Tooltip, Legend);
 const PieChart = () => {
   // Chart Data
   const data = {
-    labels: ["Hair Care", "Baby Care", "Skin Care", "Medicine"],
+    labels: [
+      "Electronics", "Fashion", "Beauty", "Home", "Health", 
+      "Grocery", "Sports", "Toys", "Books", "Automobiles"
+    ],
     datasets: [
       {
-        data: [30, 20, 25, 25],
-        backgroundColor: ["#6b8e23", "#ff4500", "#ffa500", "#4169e1"],
+        data: [15, 10, 12, 10, 8, 9, 7, 8, 6, 5, 4, 3, 2, 1], // Sample sales distribution
+        backgroundColor: [
+          "#6b8e23", "#ff4500", "#ffa500", "#4169e1", 
+          "#8a2be2", "#dc143c", "#ff69b4", "#20b2aa", "#008080", 
+          "#ffd700", "#ff6347", "#8b4513"
+        ],
         borderWidth: 1,
         borderColor: "#fff",
       },

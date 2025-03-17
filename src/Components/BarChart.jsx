@@ -124,8 +124,8 @@ const RevenueOrdersChart = () => {
         position: "top",
         labels: {
           font: {
-            size: 14,
-            family: "Lisu Bosa",
+            size: 12,
+            family: "'Times New Roman', Times, serif",
           },
         },
       },
@@ -246,9 +246,6 @@ const RevenueOrdersChart = () => {
           )}
         </div>
       </div>
-      <p className="chart-subtitle">
-        Track your revenue growth and order insights effortlessly in one place
-      </p>
       <Bar data={dataByPeriod[selectedOption]} options={options} />
     </div>
   );

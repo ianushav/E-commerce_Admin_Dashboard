@@ -42,7 +42,7 @@ const customers = [
 const ShopAdminCustomers = () => {
   const tableRef = useRef(null);
   const [currentPage, setCurrentPage] = useState(1);
-  const [itemsPerPage] = useState(6);
+  const [itemsPerPage] = useState(7);
   const [activeTab, setActiveTab] = useState("All Customers");
 
   // Filter customers based on the active tab

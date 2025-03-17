@@ -127,3 +127,26 @@
       margin: 0 auto;
     }
   }
+
+  .search-bar {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  
+  .search-bar input {
+    width: 200px;
+    border-radius: 20px;
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+  }
+  
+  .search-bar button {
+    border-radius: 50%;
+    padding: 5px 10px;
+    background-color: #007bff;
+    border: none;
+    color: white;
+    cursor: pointer;
+  }
+  

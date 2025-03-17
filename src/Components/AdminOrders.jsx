@@ -79,7 +79,7 @@ const AdminOrders = () => {
   const tableRef = useRef(null);
   const [activeTab, setActiveTab] = useState("All Orders");
   const [currentPage, setCurrentPage] = useState(1);
-  const [itemsPerPage] = useState(6); // Number of items per page
+  const [itemsPerPage] = useState(7); // Number of items per page
 
   const handleTabClick = (tab) => {
     setActiveTab(tab);

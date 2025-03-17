@@ -30,10 +30,16 @@ const AddProduct = () => {
 
   // Define category-to-tags mapping
   const category = {
-    "Hair Care": ["Hair Growth", "Anti-Dandruff", "Strengthening", "Nourishing"],
-    "Skin Care": ["Hydrating", "Acne Treatment", "Anti-Aging", "Brightening"],
-    "Medicine": ["Immunity Booster", "Detox", "Anti-inflammatory", "Stress Relief"],
-    "Baby Care": ["Gentle Formula", "Moisturizing", "No Harsh Chemicals", "Hypoallergenic"],
+    "Electronics": ["Smartphones", "Laptops", "Smartwatches", "Headphones", "Drones"],
+  "Fashion": ["Men's T-Shirts", "Women's Dresses", "Jeans", "Shoes", "Bags"],
+  "Beauty": ["Lipstick", "Eyeliner", "Foundation", "Perfume", "Grooming Kits"],
+  "Home": ["Kitchen Appliances", "Furniture", "Home Decor", "Cleaning Essentials"],
+  "Health": ["Vitamins", "Protein Powder", "Yoga Mats", "Fitness Bands"],
+  "Grocery": ["Fresh Fruits", "Organic Vegetables", "Dairy Products", "Snacks"],
+  "Sports": ["Cricket Bat", "Football", "Badminton Racket", "Trekking Gear"],
+  "Toys": ["Soft Toys", "Educational Games", "Remote Control Cars", "Dolls"],
+  "Books": ["Novels", "Educational Books", "Comics", "Stationery Items"],
+  "Automobiles": ["Car Covers", "Bike Helmets", "Tyre Inflators", "Car Perfumes"]
   };
 
   // Handle input change with comma separation
@@ -173,11 +179,6 @@ const AddProduct = () => {
                 <option key={category} value={category}> {category} </option>
               ))} 
             </select>
-            {/* Ingredients */}
-            <div className="add-product-section">
-              <label>Ingredients</label>
-              <textarea className="add-product-description1" name="ingredients" placeholder="Enter ingredients (comma separated)" value={product.ingredients} onChange={handleTyping} onBlur={handleBlur} />
-            </div>
 
             {/* Key Features */}
             <div className="add-product-section">
@@ -189,8 +190,6 @@ const AddProduct = () => {
               <label>Benefits</label>
               <textarea name="benefits" placeholder="Enter benefits (comma separated)" value={product.benefits} onChange={handleInputChange} onBlur={handleBlur} className="add-product-description1" />
             </div>
-
-            
 
                 {/* Additional Information Section */}
             <div className="add-product-section">

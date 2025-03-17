@@ -3,7 +3,6 @@
 }
 
 .admin-customers-table-container {
-  margin-top: 5%;
   margin-left: 18%;
   width: 80%;
   padding: 20px;
@@ -39,14 +38,15 @@
 }
 
 .admin-customers-filters-button.active {
-  background-color: #636b2f;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  transition: background 0.5s ease-in-out;
   color: white;
-  border-color: #636b2f;
 }
 
 .admin-customers-filters-button:hover{
   color: white;
-  background-color: #636b2f;
+  background: linear-gradient(135deg, #214458, #2a4a5e, #3b647e);
+
 }
 
 /* Table Styling */
@@ -151,16 +151,18 @@
     
     .pagination button {
       padding: 5px 10px;
-      border: 1px solid #636b2f;
+      border: 1px solid #0f2027;
       background-color: transparent;
-      color: #636b2f;
+      color: #2c5364;
       cursor: pointer;
       border-radius: 5px;
       transition: all 0.3s;
     }
     
+    
     .pagination button.active {
-      background-color: #636b2f;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      transition: background 0.5s ease-in-out;
       color: white;
     }
     
@@ -170,16 +172,12 @@
     }
     
     .pagination button:hover:not(:disabled) {
-      background-color: #636b2f;
+      background: linear-gradient(135deg, #214458, #2a4a5e, #3b647e);
       color: white;
     }
 
     /* Responsive adjustments */
 @media (max-width: 768px) {
-  .admin-customers-table-container{
-      margin-top: 20%;
-  }
- 
   .admin-customers-filters-button {
       font-size: 12px;
       padding: 4px 5px;
@@ -194,7 +192,6 @@
 
 @media (min-width: 769px) and (max-width: 992px) {
   .admin-customers-table-container{
-      margin-top: 12%;
       margin-left: 30%;
   }
  
@@ -209,7 +206,6 @@
 }
 @media (min-width: 993px) and (max-width: 1200px) {
   .admin-customers-table-container{
-      margin-top: 12%;
       margin-left: 25%;
   }
 }

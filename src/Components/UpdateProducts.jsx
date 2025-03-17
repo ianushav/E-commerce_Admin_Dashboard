@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlus,faX} from '@fortawesome/free-solid-svg-icons';
 import UploadImage from "./UploadImage";
 
-const AddProduct = () => {
+const UpdateProduct = () => {
   const [product, setProduct] = useState({
     additionalInfo: [], // Start with one row
     productName: "",
@@ -30,10 +30,16 @@ const AddProduct = () => {
 
   // Define category-to-tags mapping
   const category = {
-    "Hair Care": ["Hair Growth", "Anti-Dandruff", "Strengthening", "Nourishing"],
-    "Skin Care": ["Hydrating", "Acne Treatment", "Anti-Aging", "Brightening"],
-    "Medicine": ["Immunity Booster", "Detox", "Anti-inflammatory", "Stress Relief"],
-    "Baby Care": ["Gentle Formula", "Moisturizing", "No Harsh Chemicals", "Hypoallergenic"],
+    "Electronics": ["Smartphones", "Laptops", "Smartwatches", "Headphones", "Drones"],
+  "Fashion": ["Men's T-Shirts", "Women's Dresses", "Jeans", "Shoes", "Bags"],
+  "Beauty": ["Lipstick", "Eyeliner", "Foundation", "Perfume", "Grooming Kits"],
+  "Home": ["Kitchen Appliances", "Furniture", "Home Decor", "Cleaning Essentials"],
+  "Health": ["Vitamins", "Protein Powder", "Yoga Mats", "Fitness Bands"],
+  "Grocery": ["Fresh Fruits", "Organic Vegetables", "Dairy Products", "Snacks"],
+  "Sports": ["Cricket Bat", "Football", "Badminton Racket", "Trekking Gear"],
+  "Toys": ["Soft Toys", "Educational Games", "Remote Control Cars", "Dolls"],
+  "Books": ["Novels", "Educational Books", "Comics", "Stationery Items"],
+  "Automobiles": ["Car Covers", "Bike Helmets", "Tyre Inflators", "Car Perfumes"]
   };
 
   // Handle input change with comma separation
@@ -160,8 +166,6 @@ const AddProduct = () => {
                 <label>Low Stock Alert</label>
                 <input className="update-product-input" type="text" name="lowStockAlert" placeholder="Enter low stock alert" value={product.lowStockAlert} onChange={handleInputChange} />
               </div>
-                          {/* Benefits (Newly Added Section) */}
-            
             </div>
           </div>
 
@@ -173,24 +177,19 @@ const AddProduct = () => {
               <option>Select Category</option>
               {Object.keys(category).map((category) => (
                 <option key={category} value={category}> {category} </option>
-              ))}
+              ))} 
             </select>
-            {/* Ingredients */}
-            <div className="update-product-section">
-              <label>Ingredients</label>
-              <textarea className="update-product-description1" name="ingredients" placeholder="Enter ingredients (comma separated)" value={product.ingredients} onChange={handleTyping} onBlur={handleBlur} />
-            </div>
 
             {/* Key Features */}
             <div className="update-product-section">
               <label>Key Features</label>
               <textarea className="update-product-description1" name="keyFeatures" placeholder="Enter key features (comma separated)" value={product.keyFeatures} onChange={handleTyping} onBlur={handleBlur} />
             </div>
+
             <div className="update-product-section">
               <label>Benefits</label>
               <textarea name="benefits" placeholder="Enter benefits (comma separated)" value={product.benefits} onChange={handleInputChange} onBlur={handleBlur} className="update-product-description1" />
             </div>
-            
 
                 {/* Additional Information Section */}
             <div className="update-product-section">
@@ -210,7 +209,7 @@ const AddProduct = () => {
               ))}
 
               {/* "Add More" button to add another row */}
-              <button type="button" className="add-info-button" onClick={() => addAdditionalInfo()} >
+              <button type="button" className="update-info-button" onClick={() => addAdditionalInfo()} >
                 <FontAwesomeIcon icon={faPlus} /> Add More
               </button>
             </div>
@@ -222,4 +221,4 @@ const AddProduct = () => {
   );
 };
 
-export default AddProduct;
+export default UpdateProduct;

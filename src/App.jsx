@@ -2,7 +2,6 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { StrictMode } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
-import AdminNavbar from "./Components/AdminNavbar";
 import AdminSidebar from "./Components/AdminSidebar";
 import Dashboard from "./Components/Dashboard";
 import AdminCustomers from "./Components/AdminCustomers";
@@ -15,7 +14,6 @@ function App() {
   return (
     <StrictMode>
       <Router basename="/E-commerce_Admin_Dashboard">  {/* 👈 Fix for GitHub Pages */}
-        <AdminNavbar />
         <div className="d-flex flex-md-row">
           {/* Sidebar */}
           <AdminSidebar />
