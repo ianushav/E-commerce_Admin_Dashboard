@@ -3,12 +3,12 @@ import { useNavigate } from "react-router-dom";
 import "../Components/Styles/DashboardProducts.css";
 
 const initialProducts = [
-  { id: "A001", name: "Aloe Vera Gel", category: "Skin Care", stock: 100, price: "₹399", image: "./aloevera.jpg" },
-  { id: "A002", name: "Bhringraj Hair Oil", category: "Hair Care", stock: 50, price: "₹349", image: "./BhringrajHairOil.jpg" },
-  { id: "A003", name: "Neem Capsules", category: "Medicine", stock: 30, price: "₹299",image: "./NeemCapsules.jpg" },
-  { id: "A004", name: "Baby Massage Oil", category: "Baby Care", stock: 200, price: "₹599", image: "./BabyMassageOil.jpg" },
-  { id: "A005", name: "Onion Hair Serum", category: "Hair Care", stock: 70, price: "₹249", image: "./OnionHairSerum.jpg" },
-  { id: "A006", name: "Ashwagandha Capsules", category: "Medicine", stock: 150, price: "₹549",image: "./AshwagandhaCapsules.jpg" }
+  { id: "H003", name: "LED Bedside Lamp", category: "Home", stock: 90, price: "₹1,199", image: "./lamp.jpg" },
+  { id: "F005", name: "Casual Sneakers", category: "Fashion", stock: 60, price: "₹2,499", image: "./sneakers.jpg" },
+  { id: "F003", name: "Unisex Sports Watch", category: "Fashion", stock: 45, price: "₹3,499", image: "./sports-watch.jpg" },
+  { id: "E001", name: "Wireless Bluetooth Earbuds", category: "Electronics", stock: 100, price: "₹2,499", image: "./earbuds.jpg" },
+  { id: "B003", name: "Charcoal Face Mask", category: "Beauty", stock: 95, price: "₹349", image: "./charcoal-mask.jpg" },
+  { id: "HL002", name: "Herbal Immunity Booster", category: "Health", stock: 110, price: "₹599", image: "./immunity-booster.jpg" },
 ];
 
 const DashboardProducts = () => {
