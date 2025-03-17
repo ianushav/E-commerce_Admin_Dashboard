@@ -1,0 +1,227 @@
+* {
+  font-family: 'Times New Roman', Times, serif !important;
+}
+
+.admin-customers-table-container {
+  margin-top: 5%;
+  margin-left: 18%;
+  width: 80%;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.admin-customers-heading {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-top: 20px;
+    margin-bottom: 10px;
+  text-align: center;
+}
+
+ /* filters */
+ .admin-customers-filters {
+  gap: 10px;
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 20px!important;
+  width: 100%;
+}
+
+.admin-customers-filters-button {
+  background-color: transparent;
+  color: #333;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.3s;
+}
+
+.admin-customers-filters-button.active {
+  background-color: #636b2f;
+  color: white;
+  border-color: #636b2f;
+}
+
+.admin-customers-filters-button:hover{
+  color: white;
+  background-color: #636b2f;
+}
+
+/* Table Styling */
+.admin-customers-table {
+  box-shadow: 0px 0px 7px 0px #00000040;
+  background: #FFFFFF;
+  width: 100%;
+  border-collapse: collapse;
+  position: relative;
+  table-layout: fixed;
+  border-radius: 30px; /* Rounded corners on the table */
+  overflow: hidden;
+}
+
+/* Header cells */
+.admin-customers-table th {
+  position: relative;
+  background-color: #FFFFFF;
+  padding: 20px;
+  text-align: left;
+  white-space: nowrap;
+  user-select: none; /* Prevent accidental selection */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  cursor: auto;
+  font-size: 1.5rem;
+  color: #000000;
+  font-weight: 500;
+}
+
+/* Table rows */
+.admin-customers-table td {
+  text-align: left;
+  padding: 12px 20px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100px;
+  font-size: 1.25rem;
+  border: none; /* Remove badmin-customers from cells */
+}
+
+.admin-customers-image {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.admin-customers-info {
+  font-size: 1.15rem;
+}
+
+.status.progressing {
+  color: #06088E;
+}
+
+.status.pending {
+  color: #FF0000;
+}
+
+.status.completed {
+  color: #6CC417;
+}
+.status.cancelled {
+  color: #808080;
+}
+
+.admin-customers-resizer {
+  width: 2px;
+  height: 60%;
+  cursor: col-resize;
+  position: absolute;
+  background-color:  #01040304!important;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin-top: 12px!important;
+}
+
+.admin-customers-resizer:hover{
+  background-color:  #aab0ae57!important;
+}
+
+  .admin-customers-table tr {
+      border-bottom: 1px solid #e0e0e0;
+  }
+  
+  .no-admin-customers-message {
+      text-align: center!important;
+      padding: 20px;
+      font-size: 18px;
+  }
+
+    .pagination {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 15px;
+      gap: 10px;
+    }
+    
+    .pagination button {
+      padding: 5px 10px;
+      border: 1px solid #636b2f;
+      background-color: transparent;
+      color: #636b2f;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: all 0.3s;
+    }
+    
+    .pagination button.active {
+      background-color: #636b2f;
+      color: white;
+    }
+    
+    .pagination button:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+    
+    .pagination button:hover:not(:disabled) {
+      background-color: #636b2f;
+      color: white;
+    }
+
+    /* Responsive adjustments */
+@media (max-width: 768px) {
+  .admin-customers-table-container{
+      margin-top: 20%;
+  }
+ 
+  .admin-customers-filters-button {
+      font-size: 12px;
+      padding: 4px 5px;
+  }
+
+  .admin-customers-table th,
+  .admin-customers-table td {
+    font-size: 14px;
+    padding: 8px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 992px) {
+  .admin-customers-table-container{
+      margin-top: 12%;
+      margin-left: 30%;
+  }
+ 
+  .admin-customers-filters-button {
+      font-size: 16px;
+  }
+
+  .admin-customers-table th,
+  .admin-customers-table td {
+    padding: 12px;
+  }
+}
+@media (min-width: 993px) and (max-width: 1200px) {
+  .admin-customers-table-container{
+      margin-top: 12%;
+      margin-left: 25%;
+  }
+}
+
+@media (min-width: 1201px) and (max-width: 1275px) {
+  .admin-customers-table-container{
+      font-size: 14px;
+  }
+  .admin-customers-table th,
+  .admin-customers-table td {
+    font-size: 15px;
+  }
+}
+
+    

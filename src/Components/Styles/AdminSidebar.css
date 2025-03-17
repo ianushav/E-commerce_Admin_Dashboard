@@ -1,0 +1,134 @@
+/* Sidebar container */
+.AdminSidebar {
+  width: 225px; /* Full width by default */
+  height: 100vh;
+  background-color: #636B2F;
+  color: white;
+  padding: 20px 0;
+  position: fixed;
+  margin-top: 86px;
+  font-family: 'Times New Roman', Times, serif!important;
+  font-size: 1.2rem;
+  transition: width 0.3s ease-in-out;
+  overflow: hidden;
+  z-index: 1000 ;
+}
+
+/* Sidebar items */
+.AdminSidebar-list {
+  padding-left: 0;
+}
+
+.AdminSidebar-item {
+  margin: 10px 0;
+}
+
+/* Sidebar links */
+.AdminSidebar-link {
+  color: white;
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.AdminSidebar-link.AdminSidebar-active {
+  text-decoration: underline; /* Underline when active */
+  font-weight: bold; /* Optionally add bold style */
+  text-decoration: underline solid 2px white;
+  transform: scale(1.05);
+}
+
+/* Active icon effect, including custom icons */
+.AdminSidebar-link.AdminSidebar-active .AdminSidebar-icon,
+.AdminSidebar-link.AdminSidebar-active img {
+  filter: brightness(1.2) contrast(1.1) sepia(0.7) saturate(6) hue-rotate(30deg);
+  transform: scale(1.2);
+}
+
+/* Hover effects */
+.AdminSidebar-link:hover {
+  transform: scale(1.05);
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Sidebar icons */
+.AdminSidebar-icon {
+  margin-right: 10px;
+  font-size: 1.4rem !important;
+  width: 20px;
+  height: 20px;
+  transition: transform 0.3s ease;
+}
+
+.custom-product-icon {
+  width: 30px;  /* Set the custom width for Products icon */
+  height: 25px;
+}
+@media (max-width: 990px) {
+  .AdminSidebar {
+    z-index: 1; /* Stay collapsed by default on small screens */
+  }
+}
+
+@media (max-width: 768px) {
+
+  .AdminSidebar {
+    width: 80px;
+    z-index: 1; /* Stay collapsed by default on small screens */
+  }
+
+  .AdminSidebar:hover {
+    width: 225px; /* Expand on hover for small screens */
+  }
+
+  .AdminSidebar-link {
+    justify-content: center;
+  }
+
+  .AdminSidebar:hover .AdminSidebar-link {
+    justify-content: flex-start;
+  }
+
+  .AdminSidebar-icon {
+    font-size: 1.5rem;
+  }
+
+  .AdminSidebar .AdminSidebar-text {
+    display: none;
+  }
+
+  .AdminSidebar:hover .AdminSidebar-text {
+    display: inline;
+  }
+}
+
+@media (min-width: 769px) {
+  .AdminSidebar {
+    width: 225px; /* Full width for large screens */
+  }
+
+  .AdminSidebar-text {
+    display: inline;
+  }
+
+  .AdminSidebar-link {
+    justify-content: flex-start;
+  }
+}
+@media (min-width: 1201px) and (max-width: 1275px) {
+  .AdminSidebar {
+    width: 200px;
+    font-size: 0.95rem; /* Full width for large screens */
+  }
+  .AdminSidebar-icon {
+    font-size: 0.95rem;
+  }
+  .AdminSidebar-link.AdminSidebar-active .AdminSidebar-icon,
+.AdminSidebar-link.AdminSidebar-active img {
+  filter: brightness(1.2) contrast(1.1) sepia(0.7) saturate(6) hue-rotate(30deg);
+  transform: scale(1);
+}
+}

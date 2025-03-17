@@ -1,0 +1,340 @@
+* {
+  font-family: 'Times New Roman', Times, serif!important;
+}
+@import url("https://fonts.googleapis.com/css2?family=Lisu+Bosa:wght@400;700&display=swap");
+.chart-container {
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.chart-title,
+.chart-subtitle {
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.chart-dropdown,
+.week-selector,
+.month-year-selector,
+.year-selector select {
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.chart-container .filters select {
+  font-family: 'Times New Roman', Times, serif;
+}
+
+
+.chart-container {
+  width: 100%;
+  max-width: 800px;
+  padding: 20px;
+  background: linear-gradient(to bottom, #ffffff, #f7f7f7);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin-left: 25%!important;
+  border-radius: 15px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+.chart-container:hover{
+  transform: scale(1.03);
+}
+
+.chart-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.chart-title {
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+.chart-dropdown {
+  background-color: #636B2F;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.filters {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.date-range {
+  font-size: 16px;
+  margin-left: 10px;
+}
+
+.chart-dropdown:focus,
+.week-selector input:focus,
+.month-year-selector select:focus,
+.year-selector select:focus {
+  background-color: #6b8e23; 
+  outline: none; 
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); 
+}
+
+.chart-dropdown option,
+.month-year-selector select option,
+.year-selector select option {
+  filter: brightness(1.2) contrast(1.1) sepia(0.7) saturate(6) hue-rotate(30deg);
+  background-color: #6b8e23; 
+  color: #fff;
+}
+
+.month-year-selector {
+  display: flex;
+  gap: 10px;
+}
+
+.week-selector input{
+  width: 90px;
+  background-color: #636B2F;
+  color: #fff;
+  border: none;
+  padding: 3px 4px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+.month-year-selector select {
+  background-color: #636B2F;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;  
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.year-selector select {
+  background-color: #636B2F;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.chart-subtitle {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.chart-summary {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.summary-text {
+  font-size: 0.8rem;
+  color: #666;
+  margin: 0;
+}
+@media(max-width: 1450px ){
+  .chart-container{
+    width: 750px;
+  }
+}
+
+@media(max-width: 1400px ){
+  .chart-container{
+    width: 700px;
+  } 
+}
+
+@media(max-width: 1300px ){
+  .chart-container{
+    width: 600px;
+  } 
+}
+
+@media(max-width: 1200px ){
+  .chart-container{
+    width: 500px;
+    margin-left: 250px!important;
+  } 
+}
+@media(max-width: 1100px ){
+  .chart-container{
+    width: 700px;
+    margin-left: 290px!important;
+    margin-bottom: 50px;
+  } 
+}
+@media (max-width: 1024px) {
+  .chart-container {
+    padding: 15px;
+  }
+  .chart-title {
+    font-size: 1rem;
+  }
+
+  .chart-dropdown {
+    padding: 4px 8px;
+  }
+
+  .chart-subtitle {
+    font-size: 0.85rem;
+  }
+}
+
+@media(max-width: 1000px ){
+  .chart-container{
+    width: 590px;
+    margin-left: 290px!important;
+    margin-bottom: 50px;
+  } 
+} 
+@media(max-width: 900px ){
+  .chart-container{
+    width: 500px;
+    margin-left: 260px!important;
+    margin-bottom: 50px;
+  } 
+}
+@media(max-width: 800px ) and (min-width: 767px){
+  .chart-container{
+    width: 500px;
+    margin-left: 250px!important;
+    margin-bottom: 50px;
+  } 
+  .week-selector input{
+    margin-right: 5px!important;
+  }
+}
+
+@media (max-width: 768px) {
+  .chart-container {
+      width: 500px;
+      margin-left: 160px!important;
+      margin-bottom: 50px;
+  }
+
+  .chart-title, .filters {
+    font-size: 1rem;
+  }
+
+  .chart-dropdown {
+    padding: 3px 6px;
+  }
+
+  .chart-subtitle {
+    font-size: 0.8rem;
+  }
+
+  .chart-summary {
+    margin: 15px 0;
+  }
+
+  .summary-text {
+    font-size: 0.75rem;
+  }
+  
+  .chart-dropdown {
+    padding: 3px 4px!important;
+  }
+  .week-selector input{
+    width: 90px!important;
+    padding: 2px;
+    margin-right: 5px!important;
+  }
+  .month-year-selector select, .year-selector select {
+    padding: 3px!important;  
+  }
+}
+
+@media(max-width: 700px ){
+  .chart-container{
+    width: 450px!important;
+    margin-left: 125px!important;
+    margin-bottom: 50px;
+  } 
+  .filters {
+    font-size: 10px;
+  }
+  .chart-title{
+    font-size: 13px!important;
+  }
+  .chart-dropdown {
+    padding: 3px 4px!important;
+  }
+  .week-selector input{
+    width: 70px!important;
+    padding: 3px 4px!important;
+    margin-right: 5px!important;
+  }
+  .month-year-selector select, .year-selector select {
+    padding: 3px!important;  
+  }
+}
+
+@media(max-width: 600px ){
+  .chart-container{
+    width: 380px!important;
+    margin-left: 100px!important;
+    margin-bottom: 50px;
+  } 
+  .filters {
+    font-size: 10px;
+  }
+  .chart-title{
+    font-size: 13px!important;
+  }
+  .chart-dropdown {
+    padding: 2px 3px!important;
+  }
+  .week-selector input{
+    width: 65px!important;
+    padding: 2px!important;
+    margin-right: 5px!important;
+  }
+  .data-range {
+    font-size: 1px!important;
+  }
+  .month-year-selector select, .year-selector select {
+    padding: 2px!important;  
+  }
+}
+
+@media(max-width: 500px ){
+  .chart-container{
+    width: 370px!important;
+    margin-left: 100px!important;
+    margin-bottom: 50px;
+  } 
+}
+
+@media (max-width: 480px) {
+  .chart-container {
+    padding: 10px;
+    margin-right: 10px;
+  }
+
+  .chart-title {
+    font-size: 0.85rem;
+  }
+
+  .chart-dropdown {
+    padding: 3px 6px;
+    font-size: 0.75rem;
+  }
+
+  .chart-subtitle {
+    font-size: 0.75rem;
+  }
+
+  .chart-summary {
+    margin: 10px 0;
+  }
+
+  .summary-text {
+    font-size: 0.7rem;
+  }
+}

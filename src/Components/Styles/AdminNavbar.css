@@ -1,0 +1,129 @@
+.custom-navbar {
+    background: linear-gradient(90deg, #E4E4E2 0%, #DDDDDD 100%);
+    padding: 5px 20px;
+    transition: background-color 0.3s ease;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+  }
+  
+  .navbar-brand {
+    display: flex;
+    align-items: center;
+  }
+  
+  .law-icon {
+    width: 72px;
+    height: auto;
+    margin-right: 12px;
+  }
+  
+  .nav-link {
+    color: #000;
+    font-family: 'Times New Roman', Times, serif;
+    text-decoration: none;
+    padding: 0 18px;
+    font-size: 18px;
+    margin: 0 8px;
+    margin-top: 10px;
+  }
+  
+  .nav-link:hover {
+    color: #636B2F;
+  }
+  
+  .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=UTF8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgb(222, 163, 107)' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+  }
+  
+  .profile-container {
+    cursor: pointer;
+    margin-left: 20px;
+    position: relative; 
+  }
+  
+  .profile-image {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%; 
+    border: 1px solid #636B2F;
+    object-fit: cover;
+    display: block;
+  }
+  
+  .profile-dropdown .dropdown-menu {
+    position: absolute;
+    top: 70px;
+    right: 10px; 
+    background: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    border-radius: 8px;
+    z-index: 2000;
+    font-family: Lisu Bosa; 
+  }
+  
+  .dropdown-item {
+    color: #000;
+    font-size: 16px;
+    text-decoration: none;
+    padding: 8px 2px;
+    display: block;
+    font-family: Lisu Bosa;
+    margin: 0!important; /* Matches navbar font */
+  }
+  
+  .dropdown-item:hover {
+    background-color: #636B2F;
+    color: #fff;
+    border-radius: 4px;
+  }
+  
+  @media (max-width: 992px) {
+    .navbar {
+      padding: 8px 25px;
+    }
+  
+    .nav-link {
+      text-align: center;
+      margin: 6px 0;
+      padding: 8px 0;
+      font-size: 16px;
+    }
+  
+    /* Center the profile image on smaller screens */
+    .profile-container {
+      margin-left: 0;
+      margin-right: 0;
+      text-align: center; /* Centers the profile image horizontally */
+      position: relative; /* Ensures dropdown is correctly positioned */
+    }
+  
+    .profile-image {
+      margin: 0 auto;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .custom-navbar {
+      padding: 7px;
+    }
+  
+    .nav-link {
+      font-size: 14px;
+      padding: 6px 0;
+    }
+  
+    /* Center the profile image on the smallest screens */
+    .profile-container {
+      margin-left: 0;
+      margin-right: 0;
+      text-align: center; /* Centers the profile image */
+    }
+  
+    .profile-image {
+      margin: 0 auto;
+    }
+  }

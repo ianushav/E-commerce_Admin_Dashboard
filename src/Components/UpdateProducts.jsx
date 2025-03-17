@@ -1,0 +1,225 @@
+import { useState } from "react";
+import "../Components/Styles/UpdateProducts.css";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPlus,faX} from '@fortawesome/free-solid-svg-icons';
+import UploadImage from "./UploadImage";
+
+const AddProduct = () => {
+  const [product, setProduct] = useState({
+    additionalInfo: [], // Start with one row
+    productName: "",
+    description: "",
+    ingredients: "",
+    keyFeatures: "",
+    basicPrice: "",
+    discountPercentage: "",
+    discountAmount: "",
+    availableStock: "",
+    lowStockAlert: "",
+    productCategory: "",
+  });
+  
+  // State to control visibility of additional fields
+
+  // Handle form submission
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log("Updated Product:", product);
+    // Add logic to save changes (e.g., API call)
+  };
+
+  // Define category-to-tags mapping
+  const category = {
+    "Hair Care": ["Hair Growth", "Anti-Dandruff", "Strengthening", "Nourishing"],
+    "Skin Care": ["Hydrating", "Acne Treatment", "Anti-Aging", "Brightening"],
+    "Medicine": ["Immunity Booster", "Detox", "Anti-inflammatory", "Stress Relief"],
+    "Baby Care": ["Gentle Formula", "Moisturizing", "No Harsh Chemicals", "Hypoallergenic"],
+  };
+
+  // Handle input change with comma separation
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+  
+    // Fields that require comma separation formatting
+    const formattedFields = ["ingredients", "key_features"];
+  
+    if (formattedFields.includes(name)) {
+      const formattedValue = value
+        .split(",")
+        .map((item) => item.trim())
+        .filter((item) => item !== "")
+        .join(", ");
+  
+      setProduct((prevProduct) => ({
+        ...prevProduct,
+        [name]: formattedValue,
+      }));
+    } else {
+      // Regular fields (like product_name and description) should remain unchanged
+      setProduct((prevProduct) => ({
+        ...prevProduct,
+        [name]: value,
+      }));
+    }
+  };
+  
+
+  // Format input on blur (when user leaves the input field)
+  const handleBlur = (e) => {
+    const { name, value } = e.target;
+    const formattedValue = value
+      .split(",")
+      .map((item) => item.trim())
+      .filter((item) => item !== "") // Remove empty entries
+      .join(", "); // Store as formatted string
+
+    setProduct({
+      ...product,
+      [name]: formattedValue,
+    });
+  };
+
+  // Handle input while typing
+  const handleTyping = (e) => {
+    const { name, value } = e.target;
+    setProduct({
+      ...product,
+      [name]: value, // Let users type naturally
+    });
+  };
+
+  
+  // Handle input change for Additional Information
+  const handleAdditionalInfoChange = (index, field, value) => {
+    const updatedInfo = [...product.additionalInfo];
+    updatedInfo[index][field] = value;
+    setProduct({ ...product, additionalInfo: updatedInfo });
+  };
+
+  // Add new topic & description row
+  const addAdditionalInfo = () => {
+    setProduct({
+      ...product,
+      additionalInfo: [...product.additionalInfo, { topic: "", description: "" }],
+    });
+  };
+
+  // Remove topic & description row
+  const removeAdditionalInfo = (index) => {
+    const updatedInfo = [...product.additionalInfo];
+    updatedInfo.splice(index, 1);
+    setProduct({ ...product, additionalInfo: updatedInfo });
+  };
+
+  
+
+  return (
+    <div className="update-product-container">
+      <h2 className="update-product-heading">Update Product</h2>
+      <div className="action-buttons">
+        <button className="update-products">Update Product</button>
+      </div>
+
+      <form onSubmit={handleSubmit}>
+        <div className="update-product-grid">
+          {/* Product Details */}
+          <div className="update-product-card">
+            <h3 className="update-product-details-title">Product Details</h3>
+            <label>Product Name</label>
+            <input className="update-product-input" type="text" name="productName" placeholder="Enter product name" value={product.productName} onChange={handleInputChange}/>
+
+            <label>Description</label>
+            <textarea className="update-product-description" name="description" placeholder="Enter product description" value={product.description} onChange={handleInputChange} />
+
+          </div>
+
+          {/* Upload Image Section */}
+<UploadImage />            
+
+          {/* Pricing and Stock */}
+          <div className="update-product-card1">
+            <h3 className="update-product-details-title">Pricing and Stock</h3>
+            <div className="pricing-grid">
+              <div>
+                <label>Basic Price</label>
+                <input className="update-product-input" type="text" name="basicPrice" placeholder="Enter basic price" value={product.basicPrice} onChange={handleInputChange} />
+              </div>
+              <div>
+                <label>Discount Percentage</label>
+                <input className="update-product-input" type="text" name="discountPercentage" placeholder="Enter discount percentage" value={product.discountPercentage} onChange={handleInputChange} />
+              </div>
+              <div>
+                <label>Discount Amount</label>
+                <input className="update-product-input" type="text" name="discountAmount" placeholder="Enter discount amount" value={product.discountAmount} onChange={handleInputChange} />
+              </div>
+              <div>
+                <label>Available Stock</label>
+                <input className="update-product-input" type="text" name="availableStock" placeholder="Enter available stock" value={product.availableStock} onChange={handleInputChange} />
+              </div>
+              <div>
+                <label>Low Stock Alert</label>
+                <input className="update-product-input" type="text" name="lowStockAlert" placeholder="Enter low stock alert" value={product.lowStockAlert} onChange={handleInputChange} />
+              </div>
+                          {/* Benefits (Newly Added Section) */}
+            
+            </div>
+          </div>
+
+          {/* Basic Details */}
+          <div className="update-product1-card">
+            <h3 className="update-product-details-title">Basic Details</h3>
+            <label>Product Category</label>
+            <select className="update-product-input" name="productCategory" value={product.productCategory} onChange={handleInputChange}>
+              <option>Select Category</option>
+              {Object.keys(category).map((category) => (
+                <option key={category} value={category}> {category} </option>
+              ))}
+            </select>
+            {/* Ingredients */}
+            <div className="update-product-section">
+              <label>Ingredients</label>
+              <textarea className="update-product-description1" name="ingredients" placeholder="Enter ingredients (comma separated)" value={product.ingredients} onChange={handleTyping} onBlur={handleBlur} />
+            </div>
+
+            {/* Key Features */}
+            <div className="update-product-section">
+              <label>Key Features</label>
+              <textarea className="update-product-description1" name="keyFeatures" placeholder="Enter key features (comma separated)" value={product.keyFeatures} onChange={handleTyping} onBlur={handleBlur} />
+            </div>
+            <div className="update-product-section">
+              <label>Benefits</label>
+              <textarea name="benefits" placeholder="Enter benefits (comma separated)" value={product.benefits} onChange={handleInputChange} onBlur={handleBlur} className="update-product-description1" />
+            </div>
+            
+
+                {/* Additional Information Section */}
+            <div className="update-product-section">
+              <label>Additional Information</label>
+              <div>
+              {/* Only show the topic and description fields when there are rows in additionalInfo */}
+              {product.additionalInfo.map((info, index) => (
+                <div key={index} className="additional-info-row">
+                <input type="text" className="update-product-input" placeholder="Topic" value={info.topic} onChange={(e) => handleAdditionalInfoChange(index, "topic", e.target.value)} required />
+                <input type="text" className="update-product-input" placeholder="Description" value={info.description} onChange={(e) => handleAdditionalInfoChange(index, "description", e.target.value)} required />
+
+                  {/* Always show the 'Cancel' button */}
+                  <button type="button" className="remove-info-button" onClick={() => removeAdditionalInfo(index)} >
+                    <FontAwesomeIcon icon={faX} />            
+                  </button>
+                </div>
+              ))}
+
+              {/* "Add More" button to add another row */}
+              <button type="button" className="add-info-button" onClick={() => addAdditionalInfo()} >
+                <FontAwesomeIcon icon={faPlus} /> Add More
+              </button>
+            </div>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  );
+};
+
+export default AddProduct;

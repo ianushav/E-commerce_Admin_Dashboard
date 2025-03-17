@@ -1,0 +1,261 @@
+*{
+    font-family: 'Times New Roman', Times, serif!important;
+}
+
+.dashboard-container {
+    margin-left: 15%;
+    padding: 20px;
+    margin-top: 6%;
+    margin-left: 225px;
+    transition: margin-left 0.3s ease;
+  }
+  
+  /* Header */
+  .dashboard-heading {
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+  }
+  
+  /* total Section */
+ .total-section {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 40px;
+  }
+  
+  /* Individual total box */
+  .total-box {
+    text-align: left;
+    padding: 25px;
+    width: 28%;
+    margin-bottom: 40px;
+    border-radius: 23px;
+    background-color: #FFFFFF;
+    box-shadow: 0px 0px 20px 7px #00000026;
+  }
+  
+  /* total Title */
+  .total-box h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-align: left;
+    color: #000000;
+  }
+  
+  /* Total Sales Text */
+  .total-sales {
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-align: left;
+    color: #636B2F;
+    border-radius: 5px;
+    font-size: 2.5rem;
+  }
+  
+  /* Sales Increase Text */
+  .sales-increase {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-align: left;
+    color: #000000;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .sales-increase .percentage {
+    margin-right: 10px;
+    font-weight: 700;
+    flex-grow: 1;
+  }
+
+  .sales-increase .week-info {
+    text-align: right;
+    font-weight: 400;
+  }
+
+  .sales-increase::before {
+    margin-right: 10px;
+    color: red; 
+  }
+ 
+
+  .header-with-icon {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .icon-circle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #636B2F;
+    position: relative;
+  }
+  
+  .icon {
+    font-size: 16px;
+    color: #FFFFFF;
+    margin-top: 4px;
+  }
+  
+  @media (max-width: 768px) {
+    /* When sidebar is collapsed */
+    .dashboard-container {
+      margin-left: 80px;
+    }
+  }
+  
+  @media (max-width: 1280px) {
+    .dashboard-container {
+      margin-top: 10%;
+    }
+
+    .total-sales {
+      font-size: 2rem; /* Larger font size on desktop */
+    }
+  
+    .sales-increase {
+      font-size: 1.15rem!important; /* Larger font size for sales increase */
+    }
+  
+    .icon-circle {
+      width: 40px;
+      height: 40px;
+    }
+  
+    .icon {
+      font-size: 16px; /* Larger icons */
+    }
+  }
+
+  @media (max-width: 1107px) {
+    .dashboard-container1 {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+    }
+    /* On very small screens like smartphones in portrait mode */
+    .total-box {
+      width: 50%;
+      margin-left: 25%; 
+    }
+  
+    .total-section {
+      flex-direction: column; 
+      justify-content: center; 
+    }
+  
+    .total-sales {
+      font-size: 1.5rem; 
+    }
+  
+    .sales-increase {
+      font-size: 1rem; 
+    }
+  
+    .icon-circle {
+      width: 30px;
+      height: 30px;
+    }
+  
+    .icon {
+      font-size: 12px;
+    }
+  }
+  
+  @media (max-width: 968px) {
+    .dashboard-container1 {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+    }
+    .total-box {
+      width: 50%;
+      margin-left: 25%; 
+    }
+  
+    .total-section {
+      flex-direction: column; 
+      justify-content: center; 
+    }
+  
+    .total-sales {
+      font-size: 1.5rem; 
+    }
+  
+    .sales-increase {
+      font-size: 1rem; 
+    }
+  
+    .icon-circle {
+      width: 30px;
+      height: 30px;
+    }
+  
+    .icon {
+      font-size: 12px;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .dashboard-container {
+      margin-top: 20%;
+    }
+
+    .total-box {
+      width: 100%;
+      margin-left: 0; 
+    }
+  
+    .total-section {
+      flex-direction: column; 
+      justify-content: center; 
+    }
+  
+    .total-sales {
+      font-size: 1.5rem; 
+    }
+  
+    .sales-increase {
+      font-size: 1rem; 
+    }
+  
+    .icon-circle {
+      width: 30px;
+      height: 30px;
+    }
+  
+    .icon {
+      font-size: 12px;
+    }
+    .dashboard-container1 {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+    }
+  }
+
+  .dashboard-container1 {
+    display: flex;
+  }
+  
+  .left-container {
+    flex: 3; 
+  }
+  
+  .right-container {
+    flex: 1; 
+  }
+  
+ 
